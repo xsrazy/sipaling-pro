@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SiPaling.pro - Platform live streaming terbaik untuk YouTube dan Facebook. Solusi terdepan untuk live streaming otomatis 24/7 dengan kualitas profesional.">
+    <meta name="keywords" content="live streaming, RTMP, YouTube, Facebook, platform streaming, loop video, streaming 24/7">
+    <meta name="author" content="SiPaling.pro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sipaling.pro">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SiPaling.pro - Platform Live Streaming Terbaik">
+    <meta property="og:description" content="Solusi terdepan untuk live streaming otomatis 24/7. Teknologi canggih yang memungkinkan Anda hadir online tanpa henti dengan kualitas profesional.">
+    <meta property="og:image" content="https://sipaling.pro/assets/SPP.png">
+    <meta property="og:url" content="https://sipaling.pro">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SiPaling.pro">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SiPaling.pro - Platform Live Streaming Terbaik">
+    <meta name="twitter:description" content="Solusi terdepan untuk live streaming otomatis 24/7. Teknologi canggih yang memungkinkan Anda hadir online tanpa henti dengan kualitas profesional.">
+    <meta name="twitter:image" content="https://sipaling.pro/assets/SPP.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/SPP.png">
+    <link rel="apple-touch-icon" href="./assets/SPP.png">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3B82F6">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./assets/SPP.png" as="image" type="image/png">
+    
+    <title>SiPaling.pro - Platform Live Streaming Terbaik Indonesia</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SiPaling.pro",
+        "url": "https://sipaling.pro",
+        "description": "Platform live streaming terbaik untuk YouTube dan Facebook",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://sipaling.pro/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://api.sipaling.pro;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    
+    <!-- Dark mode initialization script for html element only -->
+    <script>
+        // Initialize dark mode on html element before page renders to prevent flash
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const shouldBeDark = saved ? saved === 'dark' : prefersDark;
+            
+            if (shouldBeDark) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Dark mode initialization script for body element -->
+    <script>
+        // Initialize dark mode on body element now that it exists
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const shouldBeDark = saved ? saved === 'dark' : prefersDark;
+            
+            if (shouldBeDark) {
+                document.body.classList.add('dark');
+            }
+        })();
+    </script>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>

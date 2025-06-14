@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Glass morphism effect */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.glass-dark {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 font-semibold py-3 px-6 rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300;
+}
+
+.card-hover {
+  @apply transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300;
+}
+
+/* Input styles */
+.input-modern {
+  @apply w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200;
+}
+
+/* Status indicators */
+.status-live {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
+}
+
+.status-idle {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200;
+}
+
+.status-starting {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.nav-link-active {
+  @apply bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300;
+}
+
+/* Hero section styles */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* Feature card styles */
+.feature-card {
+  @apply bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300;
+}
+
+/* Dashboard styles */
+.dashboard-card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-4 sm:p-6;
+}
+
+.upload-zone {
+  @apply border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center hover:border-blue-400 dark:hover:border-blue-500 transition-colors duration-200;
+}
+
+.upload-zone-active {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-900/20;
+}
+
+/* Platform selection styles */
+.platform-card {
+  @apply p-3 sm:p-4 border-2 rounded-xl flex items-center space-x-3 transition-all duration-200 cursor-pointer hover:shadow-md;
+}
+
+.platform-card-selected {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md;
+}
+
+.platform-card-unselected {
+  @apply border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600;
+}
+
+/* Control panel styles */
+.control-button {
+  @apply w-full flex items-center justify-center space-x-2 py-3 px-4 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105;
+}
+
+.control-button-start {
+  @apply bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl;
+}
+
+.control-button-stop {
+  @apply bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 shadow-lg hover:shadow-xl;
+}
+
+.control-button-disabled {
+  @apply bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed transform-none hover:scale-100;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .hero-gradient {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .dashboard-card {
+    padding: 1rem;
+  }
+  
+  .upload-zone {
+    padding: 2rem 1rem;
+  }
+  
+  .platform-card {
+    padding: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    space-x: 0;
+    gap: 0.5rem;
+  }
+  
+  .control-button {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Form input improvements for mobile */
+  .input-modern {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .input-modern {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .card {
+    margin: 0.5rem;
+  }
+  
+  /* Better form alignment on very small screens */
+  .platform-card {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+  
+  .control-button {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Social media icons */
+.social-icon {
+  @apply w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110;
+}
+
+.social-icon-instagram {
+  @apply hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500;
+}
+
+.social-icon-facebook {
+  @apply hover:bg-blue-600;
+}
+
+.social-icon-telegram {
+  @apply hover:bg-blue-500;
+}
+
+.social-icon-github {
+  @apply hover:bg-gray-700;
+}
+
+/* Footer styles */
+.footer-gradient {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.footer-gradient-dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}

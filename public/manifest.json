@@ -1,0 +1,27 @@
+{
+  "name": "SiPaling.pro - Live Streaming Automation",
+  "short_name": "SiPaling.pro",
+  "description": "Platform otomasi live streaming terbaik untuk YouTube dan Facebook",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/SPP.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/SPP.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "id",
+  "dir": "ltr"
+}
